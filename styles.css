@@ -1,0 +1,299 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Corpo da página */
+body {
+    background-color: #334659;
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #334659;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.logo span {
+    color: #f2c203;
+}
+
+/* Navegação */
+nav {
+    background: #334659;
+    padding: 12px 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+nav a {
+    color: #fffbfb;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 15px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a:focus {
+    background-color: #f5f5f5;
+    color: #333;
+    transform: translateY(-3px);
+    box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0, 85, 165, 0), rgba(0, 85, 165, 0)), 
+                url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/f51bd589-f200-462a-a724-9d2419c0fb18.png') center/cover;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* Botão */
+.btn {
+    display: inline-block;
+    background-color: #2ECC71;
+    color: white;
+    padding: 12px 25px;
+    margin: 15px 0;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    font-size: 1.1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.btn:hover {
+    background-color: #27AE60;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.3);
+}
+
+/* Seções */
+.section {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.section h2 {
+    color: #003366;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    border-bottom: 2px solid #ffcc00;
+    padding-bottom: 5px;
+}
+
+/* Produtos */
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.product-card {
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+}
+
+.product-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.product-info {
+    padding: 10px;
+}
+
+.product-info h3 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+/* Serviços */
+.service-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #dae0e8d9;
+    border-radius: 5px;
+}
+
+.service-item i {
+    margin-right: 10px;
+    color: #0055a5;
+    font-size: 1.2rem;
+}
+
+/* Rodapé */
+footer {
+    background: #003366;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 30px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0;
+    padding-left: 20px;
+    gap: 40px;
+}
+
+.footer-info,
+.footer-image {
+    flex: 1 1 300px;
+}
+
+/* Ajustes para imagem do rodapé */
+.footer-image {
+    height: auto;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.footer-image img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+/* Logo */
+.footer-logo {
+    max-width: 200px;
+    height: auto;
+    margin: 0 0 1.5rem;
+    display: block;
+}
+
+/* Contato e redes */
+.contact-info {
+    margin-bottom: 15px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-start;
+    margin-top: 1.5rem;
+}
+
+/* WhatsApp da esquerda tamanho fixo */
+.social-icons a.whatsapp img {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.social-icons a {
+    color: #0080ff;
+    background: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-icons a img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Botão WhatsApp fixo inferior direito */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+}
+
+.whatsapp-float img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    box-shadow: 0 0px 8px rgb(22, 202, 40);
+    transition: transform 0.2s ease;
+}
+
+.whatsapp-float img:hover {
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .product-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-image img {
+        width: 100%;
+        max-width: 200px;
+        height: auto;
+        margin: 0 auto;
+    }
+}
